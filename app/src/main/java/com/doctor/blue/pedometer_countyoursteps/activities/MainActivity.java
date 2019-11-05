@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.PopupMenu;
 
 import androidx.fragment.app.FragmentTransaction;
@@ -25,7 +26,8 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.frame_main)
     FrameLayout frameMain;
     @BindView(R.id.btn_menu)
-    Button btnMenu;
+    ImageButton btnMenu;
+
     @Override
     public int getLayoutId() {
         return R.layout.activity_main;

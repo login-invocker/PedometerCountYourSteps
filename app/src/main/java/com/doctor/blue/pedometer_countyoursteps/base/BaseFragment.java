@@ -15,17 +15,20 @@ import butterknife.Unbinder;
 public abstract class BaseFragment extends Fragment {
     protected View view;
     private Unbinder unbinder;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view=inflater.inflate(getLayoutId(), container, false);
+        view = inflater.inflate(getLayoutId(), container, false);
         unbinder = ButterKnife.bind(this, view);
         init();
         return view;
     }
 
     public abstract int getLayoutId();
+
     public abstract void init();
+
     @Override
     public void onDestroy() {
         super.onDestroy();
