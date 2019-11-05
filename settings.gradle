@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':WaveView'
 rootProject.name='Pedometer - Count Your Steps'

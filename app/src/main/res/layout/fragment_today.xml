@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context=".fragments.TodayFragment">
+
+    <com.doctor.blue.pedometer_countyoursteps.views.WaveView
+        android:id="@+id/wave_view_today"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:above_wave_color="@color/waveColor"
+        app:blow_wave_color="@color/waveColor" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_user_goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:fontFamily="@font/allertastencil"
+            android:gravity="center"
+            android:text="@string/goal"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_28sdp" />
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_below="@+id/txt_user_goal"
+          android:id="@+id/layout_count_step"
+          android:gravity="center"
+          android:layout_marginTop="@dimen/_60sdp">
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:layout_weight="1">
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/allertastencil"
+                   android:gravity="center"
+                   android:text="@string/steps"
+                   android:textColor="@color/textColor"
+                   android:textSize="@dimen/_28sdp"
+                   />
+               <ImageView
+                   android:layout_width="@dimen/_52sdp"
+                   android:layout_height="@dimen/_52sdp"
+                   android:scaleType="fitCenter"
+                   android:layout_gravity="center"
+                   android:src="@drawable/ic_steps"
+                   />
+           </LinearLayout>
+         </LinearLayout>
+          <TextView
+              android:id="@+id/txt_progress"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:fontFamily="@font/robika"
+              android:gravity="center"
+              android:text="1000"
+              android:layout_weight="1"
+              android:textColor="@color/textColor"
+              android:textSize="@dimen/_50sdp" />
+      </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btn_start_walk"
+            android:layout_width="@dimen/_128sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_count_step"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:src="@drawable/ic_play" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_start_walk"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:src="@drawable/ic_distance" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/robika"
+                    android:gravity="center"
+                    android:text="20km"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_16sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:src="@drawable/ic_kcal"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/robika"
+                    android:gravity="center"
+                    android:text="20 Kcal"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_16sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:src="@drawable/ic_time" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/robika"
+                    android:gravity="center"
+                    android:text="0h 51m"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_16sdp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>
