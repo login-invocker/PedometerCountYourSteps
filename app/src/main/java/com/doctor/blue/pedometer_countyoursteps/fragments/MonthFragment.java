@@ -11,7 +11,5 @@ public class MonthFragment extends BaseFragment {
     }
 
     @Override
-    public void init() {
-
-    }
+    public void init() { }
 }

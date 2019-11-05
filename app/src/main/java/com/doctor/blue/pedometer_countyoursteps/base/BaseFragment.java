@@ -13,7 +13,7 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 public abstract class BaseFragment extends Fragment {
-    protected View view;//view
+    protected View view;
     private Unbinder unbinder;
     @Nullable
     @Override
