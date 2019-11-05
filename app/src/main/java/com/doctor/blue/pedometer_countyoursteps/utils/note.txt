@@ -1,0 +1,7 @@
+
+Class Settings is Singleton Class. This class is responsible for saving settings for the app.
+And use SharedPreferences to save data
+
+
+
+
