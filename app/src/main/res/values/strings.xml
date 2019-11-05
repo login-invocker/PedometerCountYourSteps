@@ -7,6 +7,8 @@
     <string name="kcal">Kcal</string>
     <string name="km">Km</string>
     <string name="steps">Steps</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

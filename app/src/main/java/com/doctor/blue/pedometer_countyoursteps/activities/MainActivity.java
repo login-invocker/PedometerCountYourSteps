@@ -7,8 +7,9 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.doctor.blue.pedometer_countyoursteps.R;
 import com.doctor.blue.pedometer_countyoursteps.base.BaseActivity;
-import com.doctor.blue.pedometer_countyoursteps.fragments.MonthAndWeekFragment;
+import com.doctor.blue.pedometer_countyoursteps.fragments.MonthFragment;
 import com.doctor.blue.pedometer_countyoursteps.fragments.TodayFragment;
+import com.doctor.blue.pedometer_countyoursteps.fragments.WeekFragment;
 import com.google.android.material.tabs.TabLayout;
 
 import butterknife.BindView;
@@ -42,15 +43,14 @@ public class MainActivity extends BaseActivity {
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
                 if (tabPosition == 0) {
-                    MonthAndWeekFragment weekFragment = new MonthAndWeekFragment();
+                    WeekFragment weekFragment = new WeekFragment();
                     transaction.replace(R.id.frame_main, weekFragment);
                 } else if (tabPosition == 1) {
                     TodayFragment todayFragment = new TodayFragment();
                     transaction.replace(R.id.frame_main, todayFragment);
                 } else {
-                    MonthAndWeekFragment monthFragment = new MonthAndWeekFragment();
+                    MonthFragment monthFragment = new MonthFragment();
                     transaction.replace(R.id.frame_main, monthFragment);
-
                 }
                 transaction.commit();
             }
@@ -70,11 +70,4 @@ public class MainActivity extends BaseActivity {
             tab.select();
     }
 
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
 }
